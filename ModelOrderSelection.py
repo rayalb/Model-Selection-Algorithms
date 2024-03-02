@@ -262,6 +262,13 @@ def MedianMarcenkoPastur(beta):
 #############################################################################
 
 def gPrior_BIC(y, lk, Ts, delta = 2):
+    '''
+    Bayesian information theoretic criteria for model order selection.
+
+    Nielsen, J. K., et. al. "Bayesian model comparasion with the g-prior".
+    IEEE Transaction on Signal Processing, 2014.
+
+    '''
 
     N = len(y)
     Z = EstimationFrequencies(y, lk, int(N/4))
